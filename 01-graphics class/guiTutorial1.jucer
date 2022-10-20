@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="usD3ss" name="guiTutorial1" projectType="guiapp" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
+  <MAINGROUP id="GWpuvo" name="guiTutorial1">
+    <GROUP id="{EB46A8D6-DA48-2C61-FDA4-0DE5FA02288A}" name="Source">
+      <FILE id="KQ2LPZ" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="w5gYcS" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+      <FILE id="Sjheww" name="MainComponent.cpp" compile="1" resource="0"
+            file="Source/MainComponent.cpp"/>
+      <FILE id="Ij5aUx" name="WallComponent.cpp" compile="1" resource="0"
+            file="Source/WallComponent.cpp"/>
+      <FILE id="de5UgH" name="WallComponent.h" compile="0" resource="0" file="Source/WallComponent.h"/>
+      <FILE id="oLkaqm" name="GrassComponent.cpp" compile="1" resource="0"
+            file="Source/GrassComponent.cpp"/>
+      <FILE id="AXpTIF" name="GrassComponent.h" compile="0" resource="0"
+            file="Source/GrassComponent.h"/>
+      <FILE id="zc64kP" name="RoofComponent.cpp" compile="1" resource="0"
+            file="Source/RoofComponent.cpp"/>
+      <FILE id="e8zDnn" name="RoofComponent.h" compile="0" resource="0" file="Source/RoofComponent.h"/>
+      <FILE id="aJcvpj" name="SunComponent.cpp" compile="1" resource="0"
+            file="Source/SunComponent.cpp"/>
+      <FILE id="Js1zr7" name="SunComponent.h" compile="0" resource="0" file="Source/SunComponent.h"/>
+      <FILE id="mgAMnE" name="TextComponent.cpp" compile="1" resource="0"
+            file="Source/TextComponent.cpp"/>
+      <FILE id="jme6Zd" name="TextComponent.h" compile="0" resource="0" file="Source/TextComponent.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+  <EXPORTFORMATS>
+    <VS2022 targetFolder="Builds/VisualStudio2022">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="guiTutorial1"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="guiTutorial1"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../../../JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2022>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+</JUCERPROJECT>
