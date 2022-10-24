@@ -42,6 +42,6 @@ void MainComponent::resized()
     dial3.setBounds(dialArea.removeFromLeft(getLocalBounds().getWidth() / 4));
     dial4.setBounds(dialArea.removeFromLeft(getLocalBounds().getWidth() / 4));
 
-    // removeFrom... removes a part from the area and returns the removed area (diak is placed here)
+    // removeFrom... removes a part from the area and returns the removed area (dial is placed here)
     // the removed area is reduced from the original area
 }
