@@ -8,5 +8,6 @@ framework tutorials</h2>
 
 
 <hr>
-Graphics class<br>
-Slider class
+Graphics Class<br>
+Slider Class
+Slider Listener
