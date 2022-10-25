@@ -8,7 +8,7 @@ framework tutorials</h2>
 
 
 <hr>
-Graphics Class<br>
-Slider Class<br>
-Slider Listener<br>
-LookAndFeel Class<br>
+Graphics Class - guiTutorial<br>
+Slider Class - dialTest<br>
+Slider Listener - sliderListener<br>
+LookAndFeel Class - lookAndFeel<br>
