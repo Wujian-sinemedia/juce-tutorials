@@ -9,6 +9,6 @@ framework tutorials</h2>
 
 <hr>
 Graphics Class<br>
-Slider Class
-Slider Listener
-LookAndFeel Class
+Slider Class<br>
+Slider Listener<br>
+LookAndFeel Class<br>
