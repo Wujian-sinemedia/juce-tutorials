@@ -1,4 +1,4 @@
-#Wave Table
+# Wave Table
 
 To create a wave table we use an array of size 1024. the array has 1024 instances of samples for a single cycle.<br>
 
