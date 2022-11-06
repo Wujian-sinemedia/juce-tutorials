@@ -9,7 +9,7 @@ MainComponent::MainComponent()
 
     frequencySlider.setSliderStyle(Slider::Rotary);
     frequencySlider.setTextBoxStyle(Slider::TextBoxBelow, false, 100, 20);
-    frequencySlider.setRange(50.0, 5000.0, 0.1);
+    frequencySlider.setRange(50.0, 5000.0);
     frequencySlider.setTextValueSuffix(" Hz");
     frequencySlider.setValue(440.0);
     frequencySlider.setSkewFactorFromMidPoint(440.0);

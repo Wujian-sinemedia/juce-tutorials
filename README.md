@@ -15,3 +15,4 @@ LookAndFeel Class - lookAndFeel<br>
 Custom LookAndFeel - customLookAndFeel<br>
 Audio Output - audioOut<br>
 Wave Table Synthesis - waveTableSine<br>
+Gain Slider Plugin - gainPlugin<br>
