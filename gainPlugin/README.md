@@ -5,9 +5,9 @@ Humans perceive volume logarithmically,
 
 $$X_{dB} = 20log(x)$$
 
-where X<sub>dB</sub> denotes loudness in decibals and x denotes position
+where <i>X<sub>dB</sub></i> denotes loudness in decibals and <i>x</i> denotes position
 
-The slider value represents L.
+The slider value represents <i>X<sub>dB</sub></i>.
 solving for x, we get
 
 $$x = 10^{X_{dB}/20}$$
