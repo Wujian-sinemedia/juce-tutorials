@@ -12,6 +12,9 @@
 
 using namespace juce;
 
+#define GAIN_ID "gain"
+#define GAIN_NAME "Gain"
+
 //==============================================================================
 /**
 */
@@ -58,7 +61,7 @@ public:
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
 
-    double rawVolume;
+    AudioProcessorValueTreeState treeState;
 private:
     //==============================================================================
 

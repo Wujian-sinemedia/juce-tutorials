@@ -17,14 +17,16 @@ GainPluginAudioProcessorEditor::GainPluginAudioProcessorEditor (GainPluginAudioP
     // editor's size to whatever you need it to be.
     setSize (75, 300);
 
+    sliderValue = std::make_unique<AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, GAIN_ID, gainSlider);
+
     gainSlider.setSliderStyle(Slider::LinearBarVertical);
     gainSlider.setTextBoxStyle(Slider::TextBoxBelow, true, 50, 20);
-    gainSlider.setRange(-48.0, 6.0);
-    gainSlider.setValue(-0.0);
-    gainSlider.setSkewFactorFromMidPoint(-9.0);
+    gainSlider.setRange(-48.0f, 6.0f);
+    gainSlider.setValue(-0.0f);
+    //gainSlider.setSkewFactorFromMidPoint(-9.0f);
     gainSlider.setTextValueSuffix(" dB");
     gainSlider.setNumDecimalPlacesToDisplay(2);
-    gainSlider.addListener(this);;
+    //gainSlider.addListener(this);;
 
     lookAndFeel.setColour(Slider::trackColourId, Colours::crimson);
     lookAndFeel.setColour(Slider::textBoxTextColourId, Colours::black);
@@ -50,8 +52,4 @@ void GainPluginAudioProcessorEditor::resized()
     gainSlider.setBounds(getBounds());
 }
 
-void GainPluginAudioProcessorEditor::sliderValueChanged(Slider* slider) {
-    if (slider == &gainSlider) {
-        audioProcessor.rawVolume = pow(10, gainSlider.getValue() / 20);
-    }
-}
+//void GainPluginAudioProcessorEditor::sliderValueChanged(Slider* slider) {}
