@@ -22,11 +22,10 @@ GainPluginAudioProcessorEditor::GainPluginAudioProcessorEditor (GainPluginAudioP
     gainSlider.setSliderStyle(Slider::LinearBarVertical);
     gainSlider.setTextBoxStyle(Slider::TextBoxBelow, true, 50, 20);
     gainSlider.setRange(-48.0f, 6.0f);
-    gainSlider.setValue(-0.0f);
+    //gainSlider.setValue(-0.0f);
     //gainSlider.setSkewFactorFromMidPoint(-9.0f);
     gainSlider.setTextValueSuffix(" dB");
     gainSlider.setNumDecimalPlacesToDisplay(2);
-    //gainSlider.addListener(this);;
 
     lookAndFeel.setColour(Slider::trackColourId, Colours::crimson);
     lookAndFeel.setColour(Slider::textBoxTextColourId, Colours::black);
@@ -51,5 +50,3 @@ void GainPluginAudioProcessorEditor::resized()
 {
     gainSlider.setBounds(getBounds());
 }
-
-//void GainPluginAudioProcessorEditor::sliderValueChanged(Slider* slider) {}
