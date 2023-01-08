@@ -19,7 +19,10 @@ SynthFrameworkAudioProcessor::SynthFrameworkAudioProcessor()
                       #endif
                        .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
                      #endif
-                       )
+                       ),
+    attackTime(0.1f)
+    //tree(*this, nullptr)
+
 #endif
 {
     synth.clearVoices();
@@ -140,6 +143,12 @@ bool SynthFrameworkAudioProcessor::isBusesLayoutSupported (const BusesLayout& la
 
 void SynthFrameworkAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
 {
+    for (int i = 0; i < synth.getNumVoices(); i++) {
+        if ((voice = dynamic_cast<SynthVoice*>(synth.getVoice(i)))) {
+            voice->getParam(attackTime);
+        }
+    }
+
     buffer.clear();
 
     synth.renderNextBlock(buffer, midiMessages, 0, buffer.getNumSamples());

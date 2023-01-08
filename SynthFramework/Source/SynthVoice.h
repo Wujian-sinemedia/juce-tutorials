@@ -19,6 +19,10 @@ public:
         return dynamic_cast<SynthSound*>(sound) != nullptr;
     }
 
+    void getParam(float attack) {
+        envelope.setAttack(attack);
+    }
+
     void startNote(int midiNoteNumber, float velocity, SynthesiserSound* sound, int currentPitchWheelPosition) {
         level = velocity;
         envelope.trigger = 1;
@@ -44,7 +48,7 @@ public:
     }
 
     void renderNextBlock(AudioBuffer<float>& outputBuffer, int startSamples, int numSamples) {
-        envelope.setAttack(20);
+        //envelope.setAttack(20);
         envelope.setDecay(500);
         envelope.setSustain(0.0);
         envelope.setRelease(60);

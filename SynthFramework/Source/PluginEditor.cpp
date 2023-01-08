@@ -16,6 +16,13 @@ SynthFrameworkAudioProcessorEditor::SynthFrameworkAudioProcessorEditor (SynthFra
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
     setSize (400, 300);
+
+    attackSlider.setSliderStyle(Slider::SliderStyle::LinearVertical);
+    attackSlider.setRange(0.1f, 5000.0f);
+    attackSlider.setValue(0.1f);
+    attackSlider.setTextBoxStyle(Slider::TextBoxBelow, true, 50, 10);
+    attackSlider.addListener(this);
+    addAndMakeVisible(attackSlider);
 }
 
 SynthFrameworkAudioProcessorEditor::~SynthFrameworkAudioProcessorEditor()
@@ -35,6 +42,11 @@ void SynthFrameworkAudioProcessorEditor::paint (juce::Graphics& g)
 
 void SynthFrameworkAudioProcessorEditor::resized()
 {
-    // This is generally where you'll want to lay out the positions of any
-    // subcomponents in your editor..
+    attackSlider.setBounds(10, 10, 40, 100);
+}
+
+void SynthFrameworkAudioProcessorEditor::sliderValueChanged(Slider* slider) {
+    if (slider == &attackSlider) {
+        audioProcessor.attackTime = attackSlider.getValue();
+    }
 }
